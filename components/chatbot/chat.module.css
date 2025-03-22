@@ -1,0 +1,131 @@
+/* app/components/ChatBox.module.css - Dark and Vibrant Variant */
+
+.container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.chatToggle {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #ff6b6b, #4a148c); /* Vibrant gradient */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.chatToggle:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+.chatBox {
+  position: absolute;
+  bottom: 80px;
+  right: 0;
+  width: 340px;
+  background: #212121; /* Dark background */
+  color: #e0e0e0;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.chatHeader {
+  background: #303030;
+  color: #bb86fc; /* Purple header text */
+  padding: 14px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  border-bottom: 2px solid #5c6bc0;
+}
+
+.chatMessages {
+  padding: 20px;
+  overflow-y: auto;
+  height: 320px;
+  max-height: 320px;
+}
+
+.message {
+  padding: 16px;
+  margin: 12px 0;
+  border-radius: 20px;
+  background: #424242;
+  color: #cfd8dc;
+  font-weight: 500;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.user {
+  background: #512da8; /* Dark purple user background */
+  text-align: right;
+  color: #b39ddb;
+}
+
+.bot {
+  background: #37474f;
+  text-align: left;
+  color: #b0bec5;
+}
+
+.inputContainer {
+  display: flex;
+  padding: 16px;
+  background: #303030;
+}
+
+.input {
+  width: 80%;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #616161;
+  background: #212121;
+  color: #e0e0e0;
+  font-weight: 500;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input:focus {
+  border-color: #bb86fc;
+  outline: none;
+  box-shadow: 0 0 8px rgba(187, 134, 252, 0.5);
+}
+
+.sendButton {
+  background: linear-gradient(135deg, #bb86fc, #ce93d8); /* Purple gradient */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sendButton:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  color: #b0bec5;
+  font-size: 16px;
+  cursor: pointer;
+}
